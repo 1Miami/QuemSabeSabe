@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Game of the Year</title>
+</head>
+<body>
+    <!-- Formulário de Login e Registro -->
+    <div id="authForm">
+        <div id="loginForm">
+            <input type="email" id="email" placeholder="E-mail" />
+            <input type="password" id="password" placeholder="Senha" />
+            <input type="file" id="profileImageInput" accept="image/*" />
+            <button id="loginButton">Login</button>
+            <button id="registerButton">Registrar</button>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+
+    <!-- Tela do Jogo -->
+    <div id="gameScreen" style="display: none;">
+        <div id="gameContent">
+            <!-- Opções do Jogador -->
+            <div id="leftSide">
+                <div class="cards" id="rock"><img src="img/Rock2.png" alt="Rock" /></div>
+                <div class="cards" id="paper"><img src="img/Paper2.png" alt="Paper" /></div>
+                <div class="cards" id="scissors"><img src="img/Scissors2.png" alt="Scissors" /></div>
+            </div>
+
+            <!-- Escolha do Oponente -->
+            <div id="rightSide">
+                <div id="cardEnemy"><img id="enemyChoice" src="img/monsterHand.png" alt="Monster Hand" /></div>
+            </div>
+        </div>
+
+        <!-- Informações do Usuário -->
+        <div id="userInfo">
+            <p id="loggedInUserName">Bem-vindo, <span id="userName"></span></p>
+            <img id="playerIcon" src="img/player/Player1Fase.jpg" alt="Player Icon" />
+        </div>
+
+        <!-- Vidas do Jogador e do Inimigo -->
+        <div id="playerLives">
+            <img id="playerLife1" src="img/heart.png" alt="Life 1" />
+            <img id="playerLife2" src="img/heart.png" alt="Life 2" />
+            <img id="playerLife3" src="img/heart.png" alt="Life 3" />
+        </div>
+
+        <div id="enemyLives">
+            <img id="enemyLife1" src="img/heart.png" alt="Enemy Life 1" />
+            <img id="enemyLife2" src="img/heart.png" alt="Enemy Life 2" />
+            <img id="enemyLife3" src="img/heart.png" alt="Enemy Life 3" />
+        </div>
+
+        <p id="resultMessage" style="display: none;"></p>
+    </div>
+
+    <div id="gameOverOverlay" style="display: none;">
+        <audio id="gameOverSound" src="audio/Goofy ahh sound.mp3"></audio>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
